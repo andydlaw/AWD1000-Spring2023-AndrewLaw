@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: olivedrab;
+}
+
+img {
+    width: 20%;
+}
+
+p {
+    font-size: 2rem;
+}
+
+#footer {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.reverse{
+    background-color: olivedrab;
+    color: black;
+}
+.bigText{
+    color: crimson;
+    font-size: 4rem;
+}
