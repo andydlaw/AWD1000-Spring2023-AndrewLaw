@@ -1,5 +1,6 @@
 html * {
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 h2 {
@@ -58,4 +59,30 @@ li:not(:last-child) {
 footer{
     font-size: small;
     text-align: center;
+    background-color: steelblue;
+    color: white;
+    padding: 20px;
+}
+header{
+    
+    border-bottom-style: solid;
+    border-color: steelblue;
+    background-image: linear-gradient(white, lightsteelblue);
+    padding: 10px;
+}
+section{
+    padding: 20px;
+}
+.aside{
+    padding: 20px;
+}
+body{
+    width: 900px;
+    border-style: solid;
+    border: 1;
+    border-color: steelblue;
+    margin: auto;
+    
+    box-shadow: 0px 5px 10px 10px black;
+    
 }
