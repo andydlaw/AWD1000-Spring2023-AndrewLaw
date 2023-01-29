@@ -1,0 +1,96 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main h1::first-letter{
+    font-size: 150%;
+}
+main h2::first-letter{
+    font-size: 150%;
+}
+main h3::first-letter{
+    font-size: 150%;
+}
+/* unvisited link */
+ a:link {
+    color: orange;
+    font-weight: bold;
+}
+
+/* visited link */
+ a:visited {
+    color: orange;
+    font-weight: bold;
+}
+
+/* mouse over link */
+ a:hover {
+    color: green;
+    font-weight: bold;
+}
+
+/* selected link */
+ a:active {
+    color: green;
+    font-weight: bold;
+}
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+}
+
+body {
+    width: 800px;
+    border-style: solid;
+    
+    
+    border-color: black;
+    border: 1;
+    margin: auto;
+
+    box-shadow: 0px 5px 10px 10px black;
+
+}
+main{
+    background-color: white;
+    padding: 30px;
+    
+}
+header{
+    background-color: white;
+    border-bottom-style: solid;
+    border-color: black;
+    background-image: linear-gradient(to top right, white ,orange, black);
+    padding: 10px;
+}
+footer{
+    background-color: white;
+    border-top-style: solid;
+    border-color: black;
+    background-image: linear-gradient(to top right, black ,orange, white);
+    padding: 10px;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+  }
+  
+  .left {
+    width: 160px;
+  }
+  
+  .right {
+    width: 500px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
