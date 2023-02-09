@@ -3,11 +3,24 @@ html * {
 
 }
 
+header h2 {
+    color: steelblue;
+    font-style: italic;
+    text-shadow: 2px 2px 5px steelblue;
+    font-size: 30px
+}
+
+header h3 {
+    font-size: 20px;
+    color: black;
+}
+
 h2 {
     font-weight: bold;
-    
+
 }
-h3{
+
+h3 {
     color: maroon;
 }
 
@@ -96,12 +109,13 @@ section {
     padding: 0 10px 0 0;
     float: right;
 }
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 
 
@@ -116,6 +130,8 @@ body {
     box-shadow: 0px 5px 10px 10px black;
 
 }
+
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -164,7 +180,7 @@ body {
 .navbar a,
 .dropbtn,
 .dropdown {
-    display: inline-block; 
+    display: inline-block;
     font-size: 16px;
     color: white;
     padding: 10px 30px;
