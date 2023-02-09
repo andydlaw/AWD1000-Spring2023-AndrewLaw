@@ -1,143 +1,231 @@
 html {
-	background-image: url("../images/bats.gif");	
+    background-image: url("../images/bats.gif");
 }
+
+
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	max-width: 960px;
-	width: 95%;                        /* fixed width was 800 */
-	background-color: white;
-	margin: 0 auto; 
-	padding: 0;
-	border: 3px solid black;
-	box-shadow: 0 9px 18px 9px;
-}
-h1, h2, h3, p {
-	margin: 0;
-	padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid black;
+    box-shadow: 0px 9px 18px 9px;
 }
 
-/* Header */
-header {
-    background-image: -webkit-linear-gradient(45deg, white 0%, orange 75%, black 100%);
-    background-image: -moz-linear-gradient(45deg, white 0%, orange 75%, black 100%);
-    background-image: -o-linear-gradient(45deg, white 0%, orange 75%, black 100%);
-    background-image: linear-gradient(45deg, white 0%, orange 75%, black 100%);
-    padding: .9375em 1.875% .9375em 1.875%;  /* 15 / 16; 15 / 800 x 100 */
-} 
-header img { 
-	float: left; 
-	padding-right: 1.875%; 
-	width: 10.6%;
-	max-width: 85px;
-	min-width: 40px;
-} 
-header h2 {
-	font-size: 230%;
-}
-header h3 {
-	font-size: 125%;
-	padding-bottom: .75em;
-}
-
-/* Navigation menu */
-#nav_menu {
-	clear: left;
-	margin: 0;
-	padding: 0;    
-}
-#nav_menu ul {
-	list-style: none;
+h1,
+h2,
+h3,
+p {
     margin: 0;
     padding: 0;
 }
-#nav_menu ul li a {
-	text-align: center;
-	display: block;
-	padding: .7em 0;
-	text-decoration: none;
-	background-color: black;
-	color: white;
-}
-#nav_menu ul li a.current {
-	color: orange;
-}
-#nav_menu ul li a:hover, #nav_menu ul li a:focus {
-	background-color: gray;
+
+a {
+    font-weight: bold;
+    color: orange;
 }
 
-/* Sidebar */
-aside {
-    margin: 0;
-    padding: 2em 0;
-}
-#nav_list ul { 
-	list-style: none;
-    margin: 0;
-    padding: 0 5%;
-}
-#nav_list ul li { 
-	margin-bottom: .5em;
-	border: 2px solid black;
-}
-#nav_list ul li a {
-	display: block;
-	font-weight: bold;
-	text-decoration: none;
-    text-align: center;
-	background-color: orange;
-	padding: .5em 0;
-	color: black;
+a:link,
+a:visited {
+    color: orange;
 }
 
-/* Section */
-section {
-    padding: 2em 5%;
-}
-section h1 { 
-	font-size: 140%;
-	margin-bottom: .5em;
-}
-section h2 {
-	font-size: 115%;
-	margin: .8em 0 .4em 0;
-}
-section p {
-	margin-bottom: .5em;
-}
-section a {
-	font-weight: bold;
-	color: orange;
-    text-decoration: none;
-}
-section a:link, main a:visited { 
-    color: orange; 
-}
-section a:hover, main a:focus { 
+a:hover,
+a:focus {
     color: green;
 }
 
-/* Footer */
-footer { 
-	border-top: 2px solid black;
-	padding: .9375em 1.875% .9375em 1.875%;
-    background-image: -webkit-linear-gradient(45deg, black 0%, orange 25%, white 100%);
-    background-image: -moz-linear-gradient(45deg, black 0%, orange 25%, white 100%);
-    background-image: -o-linear-gradient(45deg, black 0%, orange 25%, white 100%);
-    background-image: linear-gradient(45deg, black 0%, orange 25%, white 100%);
-} 
-footer p {
-	font-size: 90%;
-	text-align: center;
+header {
+
+    border-bottom: 2px solid black;
+    background-image: linear-gradient(to top right, white, orange, black);
+    padding: 15px;
+}
+
+header img {
+    float: left;
+    padding-right: 15px;
+}
+
+header h2 {
+    font-size: 230%;
+}
+
+header h3 {
+    font-size: 125%;
+}
+
+/*Navbar */
+#nav_menu {
+    clear: left;
+}
+
+#nav_menu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 160px;
+    padding: 0.7em 0;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+
+#nav_menu ul li {
+    float: left;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover>ul {
+    display: block;
+}
+
+#nav_menu>ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#nav_menu ul li a.current {
+    color: orange;
+}
+
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus{
+    background-color: grey;
+    color: white
+}
+
+
+/*sidebar */
+aside {
+    float: left;
+    width: 160px;
+    padding: 20px 0;
+}
+
+#nav_list1 ul{
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+#nav_list1 ul li{
+    width: 110px;
+    margin-bottom: 0.5em;
+    border: 2px solid black;
+}
+#nav_list1 ul li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: orange;
+    padding: 0.5em 0 0.5em 0.5em;
+    color: black;
+}
+#nav_list1 a:hover, #nav_list1 a:active{
+    color: white;
+}
+
+
+
+#nav_list2 ul{
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+#nav_list2 ul li{
+    width: 110px;
+    margin-bottom: 0.5em;
+    border: 2px solid black;
+}
+#nav_list2 ul li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: orange;
+    padding: 0.5em 0 0.5em 0.5em;
+    color: black;
+}
+#nav_list2 a:hover, #nav_list2 a:active{
+    color: white;
+}
+#nav_list2{
+    display: none;
+}
+section {
+    width: 580px;
+    float: right;
+    padding: 20px 40px 20px 20px;
+}
+
+section h1 {
+    font-size: 140%;
+    margin-bottom: 0.5em;
+}
+
+section h1::first-letter {
+    font-size: 240%;
+}
+
+section h2 {
+    font-size: 125%;
+    margin: 0.8em 0 0.5em 0;
+}
+
+section h3 {
+    font-size: 110%;
+    margin: 0.8em 0 0.5em 0;
+    color: orange;
+}
+
+section p {
+    margin-bottom: 0.5em;
+}
+section a {
+    font-weight: bold;
+    color: orange;
+}
+section a:link, main a:visited {
+    color: orange;
+}
+section a:hover, main a:focus {
+    color: green;
+}
+
+
+/*footer*/
+footer {
+    font-size: small;
+    text-align: center;
+    clear: both;
+    border-top: 2px solid black;
+    background-image: linear-gradient(to top right, black, orange, white);
+    padding: 15px;
 }
 
 #mobile_menu {
 	display: none;
 }
 
-@media only screen and (max-width: 800px) {
-	html {
-		background-image: none;
-	}
+/* media queries */
+@media only screen and (max-width: 900px) {
 	body {
 		font-size: 90%;
 		box-shadow: none;
@@ -148,11 +236,55 @@ footer p {
 	#nav_menu {
 		display: none;
 	}
-	#mobile_menu {
+    
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: black !important;
+	    padding: 5px !important;
+        
+    }
+
+    #mobile_menu {
 		display: block;
+        float: right;
+        
+        
+       
 	}
+    #mobile_menu ul {
+        background-color: black;
+    }
+    #mobile_menu a {
+        background-color: black;
+        color: white;
+    }
+    #mobile_menu a:hover, #mobile_menu a:focus {
+        color: orange;
+    }
 	header h2 {
 		font-size: 200%;
+	}
+	section {
+		float: right;
+        width: 93.3334%;
+        padding: 0em;
+	}
+	#nav_list2 {
+		
+		width: 93.3334%;
+        padding-top: 0;
+        padding-bottom: 1.5625em;
+        display: block;
+
+
+	}
+
+    #nav_list1 {
+		
+		width: 93.3334%;
+        padding-top: 0;
+        padding-bottom: 1.5625em;
+        display: none;
 	}
 }
 
@@ -163,7 +295,7 @@ footer p {
 	header h3 {
 		font-size: 115%;
 	}
-	section h1 {
-		font-size: 130%;
-	}
+    section p {
+	    font-size: 95%;
+    }
 }

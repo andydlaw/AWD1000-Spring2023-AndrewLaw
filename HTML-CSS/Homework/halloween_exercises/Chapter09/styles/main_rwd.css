@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    width: 800px;
+    max-width: 800px;
     background-color: white;
     margin: 0 auto;
     padding: 0;
@@ -212,27 +212,29 @@ footer {
     
     /* change background and decrease padding */
     .slicknav_menu {
-        background: grey !important;
+        background: black !important;
 	    padding: 3px !important;
     }
 
     #mobile_menu {
 		display: block;
+        float: right;
 	}
     #mobile_menu ul {
-        background-color: gray;
+        background-color: black;
     }
     #mobile_menu a {
-        background-color: gray;
+        background-color: black;
+        color: white;
     }
     #mobile_menu a:hover, #mobile_menu a:focus {
-        color: gray;
+        color: orange;
     }
 	header h2 {
 		font-size: 200%;
 	}
 	section {
-		float: none;
+		float: right;
         width: 93.3334%;
 	}
 	aside {
