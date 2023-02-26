@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title>Halloween Store</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/email.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+      </script>
+
+
+</head>
+
+<body>
+  <header>
+    <img src="images/pumpkin.gif" alt="Pumpkin logo" width="85" />
+    <h2>The Halloween Store</h2>
+    <h3>For the little Goblin in all of us!</h3>
+
+
+
+  </header>
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="products/index.html">Products</a></li>
+      <li><a href="personal/index.html">Personal</a></li>
+      <li><a href="decorations/index.html">Decorating Ideas</a>
+      <ul>
+        <li><a href="decorations/outdoor.html">Outdoor</a></li>
+        <li><a href="decorations/indoor.html">Indoor</a></li>
+        <li><a href="decorations/table.html">Table</a></li>
+        <li><a href="decorations/treats.html">Treats</a></li>
+      </ul></li>
+      <li><a href="email.html"class="current"   >Join Email</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="nav_list">
+      <ul>
+        <li><a href="products/props.html">Props</a></li>
+        <li><a href="products/costumes.html">Costumes</a></li>
+        <li><a href="products/special.html">Special FX</a></li>
+        <li><a href="products/masks.html">Masks</a></li>
+      </ul>
+    </aside>
+    <section>
+      <h2>Please enter in the following information:</h2>
+
+      <form  action="subscribe.html" method="get" >  
+        <table>
+          <tr>
+           <td>First Name:</td>
+           <td><input type="text" id="FirstName" required> 
+            <script>
+              window.onload = function() {
+                document.getElementById("FirstName").focus();
+              }
+              </script>
+          </td>
+          </tr>
+          <tr>
+            <td>Last Name:</td>
+            <td><input type="text" id="LastName" required> </td>
+           </tr>
+           <tr>
+            <td>Email:</td>
+            <td><input type="email" id="Email" required> </td>
+           </tr>
+           <tr>
+            <td>Zip Code:</td>
+            <td><input id="zip" id="zip" type="number" placeholder="Optional but appreciated: 99999" > </td>
+           </tr>
+           <tr>
+            <td> </td>
+            <td><input type = "submit" id = "submit" value = "Subscribe" class="button"/> </td>
+           </tr>
+        </table>
+        
+        
+     </form>  
+
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Andrew Law</p>
+  </footer>
+</body>
+</html>

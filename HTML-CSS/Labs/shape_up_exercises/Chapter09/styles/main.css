@@ -1,240 +1,153 @@
-html * {
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-header h2 {
-    color: steelblue;
-    font-style: italic;
-    text-shadow: 2px 2px 5px steelblue;
-    font-size: 30px
-}
-
-header h3 {
-    font-size: 20px;
-    color: black;
-}
-
-h2 {
-    font-weight: bold;
-
-}
-
-h3 {
-    color: maroon;
-}
-
-
-/* unvisited link */
-a:link {
-    color: maroon;
-}
-
-/* visited link */
-a:visited {
-    color: maroon;
-}
-
-/* mouse over link */
-a:hover {
-    color: steelblue;
-}
-
-/* selected link */
-a:active {
-    color: steelblue;
-}
-
-
-/* unvisited link */
-.aside a:link {
-    color: steelblue;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* visited link */
-.aside a:visited {
-    color: steelblue;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* mouse over link */
-.aside a:hover {
-    color: maroon;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* selected link */
-.aside a:active {
-    color: maroon;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-li:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-footer {
-    font-size: small;
-    text-align: center;
-    background-color: steelblue;
-    color: white;
-    padding: 20px;
-}
-
-header {
-
-    border-bottom-style: solid;
-    border-color: steelblue;
-    background-image: linear-gradient(white, lightsteelblue);
-    padding: 10px;
-}
-
-section {
-    padding: 20px;
-}
-
-.aside {
-    width: 245px;
-    padding: 0 10px 0 0;
-    float: left;
-}
-
-.content {
-    width: 570px;
-    padding: 0 10px 0 0;
-    float: right;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
-
+/* the styles for the elements */
 body {
+	font-family: Arial, Helvetica, sans-serif;
     width: 900px;
-    border-style: solid;
-    border: 1;
-    border-color: steelblue;
-    margin: auto;
-
-    box-shadow: 0px 5px 10px 10px black;
-
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid steelblue;
+    box-shadow: 0 10px 20px 10px;
 }
-
-
-
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: steelblue;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
 }
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding: 16px 30px;
+a {
     text-decoration: none;
-    font-size: 17px;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: grey;
-    color: white;
     font-weight: bold;
 }
+a:hover, a:focus { 
+    color: maroon;
+}
 
-/* Add a color to the active/current link */
-.navbar a.active {
-    background-color: steelblue;
-    color: black;
+/* the styles for the header */
+header {
+    background-image: -webkit-linear-gradient(to bottom, white 0%, lightsteelblue 100%);
+    background-image: -moz-linear-gradient(to bottom, white 0%, lightsteelblue 100%);
+    background-image: -o-linear-gradient(to bottom, white 0%, lightsteelblue 100%);
+    background-image: linear-gradient(to bottom, white 0%, lightsteelblue 100%);
+    padding: 15px 30px; 
+    border-bottom: 2px solid steelblue; 
+} 
+header img { 
+	float: left; 
+} 
+header h2 {
+	font-size: 250%;
+	font-style: italic;
+	color: steelblue;
+	text-indent: 45px;
+	text-shadow: 3px 3px 3px steelblue;
+    margin-bottom: .3em;
+}
+header h3 {
+	font-size: 150%;
+    text-indent: 45px;
+    padding-bottom: .75em;       
+}
+
+/* the styles for the navigation menu */
+#nav_menu {
+	clear: left;
+    border-bottom: 2px solid steelblue;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 180px;
+	padding: .7em 0;
+	background-color: steelblue;
     font-weight: bold;
+	color: white;
+}
+#nav_menu ul li a.current {
+	color: black;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: lightsteelblue;
 }
 
-/* Navbar container */
-.navbar {
-    overflow: hidden;
-    background-color: steelblue;
-    font-weight: bold;
+/* the styles for the section */
+section {
+    width: 565px;
+    float: right;
+    padding: 25px 30px;
+}
+section h1 {
+    font-size: 160%;
+    margin-bottom: .3em;
+}
+section h2 {
+    font-size: 130%;
+    margin-bottom: .5em;
+}
+section h3 {
+    color: maroon;
+    font-size: 110%;
+    margin-bottom: .4em;
+}
+section p {
+    font-size: 100%;
+    margin-bottom: .7em;
 }
 
-/* Links inside the navbar */
-.navbar a,
-.dropbtn,
-.dropdown {
-    display: inline-block;
-    font-size: 16px;
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
+/* the styles for the sidebar */
+aside {
+    float: left;
+    width: 245px;
+    padding: 25px 0 0 30px;
 }
-
-
-
-/* Dropdown button */
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    /* Important for vertical align on mobile phones */
+aside h2 {
+	font-size: 130%;    
+	color: maroon;
+    margin-bottom: 8px;
+}
+aside ul {
+    line-height: 1.5;
     margin: 0;
-    /* Important for vertical align on mobile phones */
+    padding-left: 16px;
+}
+aside a:link, aside a:visited { 
+    color: steelblue
+}
+aside a:hover, aside a:focus {
+    color: maroon;
 }
 
-/* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: lightsteelblue;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
+/* the styles for the footer */
+footer { 
+	clear: both;
+	padding: 15px 30px;
     background-color: steelblue;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: lightsteelblue;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+} 
+footer p {
+	text-align: center;
+    font-size: 85%;
+    color: white;    
 }

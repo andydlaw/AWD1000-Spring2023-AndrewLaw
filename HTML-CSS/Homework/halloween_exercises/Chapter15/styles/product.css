@@ -1,0 +1,317 @@
+html {
+    background-image: url("../images/bats.gif");
+}
+
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid black;
+    box-shadow: 0px 9px 18px 9px;
+
+
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-weight: bold;
+    color: orange;
+}
+
+a:link,
+a:visited {
+    color: orange;
+}
+
+a:hover,
+a:focus {
+    color: green;
+}
+
+header {
+
+    border-bottom: 2px solid black;
+    background-image: linear-gradient(to top right, white, orange, black);
+    padding: 15px;
+}
+
+header img {
+    float: left;
+    padding-right: 15px;
+}
+
+header h2 {
+    font-size: 230%;
+}
+
+header h3 {
+    font-size: 125%;
+}
+
+/*Navbar */
+#nav_menu {
+    clear: left;
+}
+
+#nav_menu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 160px;
+    padding: 0.7em 0;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+
+#nav_menu ul li {
+    float: left;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover>ul {
+    display: block;
+}
+
+#nav_menu>ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#nav_menu ul li a.current {
+    color: orange;
+}
+
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus{
+    background-color: grey;
+    color: white
+}
+
+
+/*sidebar */
+aside {
+    float: left;
+    width: 160px;
+    padding: 20px 0;
+}
+
+#nav_list ul{
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+#nav_list ul li{
+    width: 110px;
+    margin-bottom: 0.5em;
+    border: 2px solid black;
+}
+#nav_list ul li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: orange;
+    padding: 0.5em 0 0.5em 0.5em;
+    color: black;
+}
+#nav_list a:hover, #nav_list a:active{
+    color: white;
+}
+
+
+section {
+    
+    
+    
+
+    display: grid;
+    grid-template-areas: 
+    'aside cat sidebar2'    ;
+    grid-template-columns: 1fr 3fr 1.5fr;    
+}
+section .navlist{
+    grid-area: aside;
+}
+
+section .cat{
+    grid-area: cat;
+    align-content: flex-start;
+
+    display: grid;
+    grid-template-areas: 
+    'title title'
+    'product descript'    ;
+    grid-template-columns: 1fr 1fr;    
+}
+section .cat .title{
+    grid-area: title;
+}
+
+section .cat .product{
+    grid-area: product;
+}
+
+section .cat .descript{
+    grid-area: descript;
+}
+
+section .sidebar2{
+    grid-area: sidebar2;
+    background-color: #F5DEB3;
+    padding: 10px;
+    font-size: small;
+    
+}
+
+section .sidebar2 ul {
+    list-style: none;
+    
+    
+}
+section .sidebar2 ul a,.sidebar2 ul  a:visited{
+    color: black;
+    font-size: smaller;
+    font-weight: 100;
+}
+section .sidebar2 ul a:active,.sidebar2 ul  a:hover{
+    color: green;
+    font-size: smaller;
+    font-weight: 100;
+}
+
+section h1 {
+    font-size: 140%;
+    margin-bottom: 0.5em;
+}
+
+section h1::first-letter {
+    font-size: 240%;
+}
+
+section h2 {
+    font-size: 125%;
+    margin: 0.8em 0 0.5em 0;
+}
+
+section h3 {
+    font-size: 110%;
+    margin: 0.8em 0 0.5em 0;
+}
+
+section p {
+    margin-bottom: 0.5em;
+}
+section a {
+    font-weight: bold;
+    color: orange;
+}
+section a:link, main a:visited {
+    color: orange;
+}
+section a:hover, main a:focus {
+    color: green;
+}
+
+/*footer*/
+footer {
+    font-size: small;
+    text-align: center;
+    clear: both;
+    border-top: 2px solid black;
+    background-image: linear-gradient(to top right, black, orange, white);
+    padding: 15px;
+}
+
+#mobile_menu {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+	body {
+		font-size: 90%;
+		box-shadow: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#nav_menu {
+		display: none;
+	}
+    
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: black !important;
+	    padding: 3px !important;
+    }
+
+    #mobile_menu {
+		display: block;
+        float: right;
+	}
+    #mobile_menu ul {
+        background-color: black;
+    }
+    #mobile_menu a {
+        background-color: black;
+        color: white;
+    }
+    #mobile_menu a:hover, #mobile_menu a:focus {
+        color: orange;
+    }
+	header h2 {
+		font-size: 200%;
+	}
+	section {
+		float: right;
+        width: 93.3334%;
+	}
+	aside {
+		float: none;        
+		width: 93.3334%;
+        padding-top: 0;
+        padding-bottom: 1.5625em;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	header h2 {
+		font-size: 180%;
+	}
+	header h3 {
+		font-size: 115%;
+	}
+    section p {
+	    font-size: 95%;
+    }
+}
+
+
+
