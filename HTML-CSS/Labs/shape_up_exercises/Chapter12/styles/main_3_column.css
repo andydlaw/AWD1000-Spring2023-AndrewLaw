@@ -1,0 +1,117 @@
+html * {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h2 {
+    font-weight: bold;
+
+}
+
+
+/* unvisited link */
+a:link {
+    color: maroon;
+}
+
+/* visited link */
+a:visited {
+    color: maroon;
+}
+
+/* mouse over link */
+a:hover {
+    color: steelblue;
+}
+
+/* selected link */
+a:active {
+    color: steelblue;
+}
+
+
+/* unvisited link */
+.aside a:link {
+    color: steelblue;
+    font-weight: bold;
+}
+
+/* visited link */
+.aside a:visited {
+    color: steelblue;
+    font-weight: bold;
+}
+
+/* mouse over link */
+.aside a:hover {
+    color: maroon;
+    font-weight: bold;
+}
+
+/* selected link */
+.aside a:active {
+    color: maroon;
+    font-weight: bold;
+}
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+    padding: 20px;
+}
+
+header {
+
+    border-bottom-style: solid;
+    border-color: steelblue;
+    background-image: linear-gradient(white, lightsteelblue);
+    padding: 10px;
+}
+
+section {
+    padding: 10px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+
+  }
+  
+  .left {
+    width: 25%;
+  }
+  .right{
+    float: right;
+    width: 25%;
+  }
+  
+  .middle {
+    width: 40%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+body {
+    width: 1200px;
+    border-style: solid;
+    border: 1;
+    border-color: steelblue;
+    margin: auto;
+
+    box-shadow: 0px 5px 10px 10px black;
+
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shape Up!</title>
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/main_rwd.css">
+	<link rel="stylesheet" href="../styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
+		});
+	</script>
+</head>
+
+<body>
+
+	<header><a href="../index.html"><img src="../images/shape_up_logo.png" alt="Shape Up Logo" /></a>
+		<h2>Shape Up!</h2>
+		<h3>Find the best fit for you</h3>
+	</header>
+	<nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+		<ul>
+			<li><a href="../index.html" class="current">Home</a></li>
+			<li><a href="../strength/index.html">Strength Training</a></li>
+			<li><a href="../cardio/index.html">Cardio Exercises</a></li>
+			<li><a href="index.html">Stress Relief</a>
+				<ul>
+					<li><a href="index.html">What is Stress?</a></li>
+					<li><a href="tips.html">5 Helpful Tips</a></li>
+					<li>
+						<a href="meditate.html">Meditation</a>
+					</li>
+					<li>
+						<a href="vipassana.html">Vipassana</a>
+					</li>
+				</ul>
+			</li>
+			<li><a href="/diet/index.html">Healthy Diets</a></li>
+		</ul>
+	</nav>
+
+	<aside>
+		<h2 style="color: maroon;">Additional resources</h2>
+		<ul>
+			<li>
+				<a href="https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm">Physical activity
+					and
+					health</a>
+			</li>
+			<li>
+				<a
+					href="http://www.heart.org/HEARTORG/HealthyLiving/PhysicalActivity/FitnessBasics/Flexibility-Exercise-Stretching_UCM_464002_Article.jsp#.WpB8zIPwaUl">Stretching
+					exercises</a>
+			</li>
+			<li>
+				<a
+					href="http://www.heart.org/HEARTORG/HealthyLiving/PhysicalActivity/FitnessBasics/Strength-and-Resistance-Training-Exercise_UCM_462357_Article.jsp#.WpCPxIPwaUl">Strength
+					training</a>
+			</li>
+			<li>
+				<a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular
+					training</a>
+			</li>
+			<li>
+				<a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a>
+			</li>
+		</ul>
+	</aside>
+
+
+	<main>
+		<h1>Meal Plan Order Form</h1>
+		<p style="text-align:left ;">Fill out the form completely as possible and we will email you a weekly meal plan,
+			customized for you--your lifestyle, your goals, and your personal needs. (Asterisks (*) indicate required
+			entries.)</p>
+		<table class="formtable">
+			<tr>
+				<td>
+					<form  action="meal_request.html" method="get" >
+
+						<fieldset>
+							<legend style="font-weight: bold">Tell us about yourself</legend>
+							<Table class="aboutmetable">
+								<tr>
+									<td style="text-align: right;">
+										*Full name:&nbsp;
+									</td>
+									<td><input type="text" id="fullname" name="fullname" required /></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;">
+										*E-mail:&nbsp;
+									</td>
+									<td><input type="email" id="email" name="email" required /></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;">
+										Gender:&nbsp;
+									</td>
+									<td><select name="gender" id="gender">
+											<option value="select">Select a gender</option>
+											<option value="male">male</option>
+											<option value="female">female</option>
+
+										</select></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;">
+										Hieght:&nbsp;
+									</td>
+									<td><input type="text" id="height" name="height" placeholder="Example 5ft 6in" />
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;">
+										Weight:&nbsp;
+									</td>
+									<td><input type="text" id="weight" name="weight" placeholder="Example: 145lbs" />
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;">
+										Age:&nbsp;
+									</td>
+									<td><input type="number" id="age" name="age" placeholder="Type your age" /></td>
+								</tr>
+							</Table>
+						</fieldset>
+			</tr>
+			</td>
+			<tr>
+				<td>
+					<fieldset>
+						<legend style="font-weight: bold">Lifestyle and goals</legend>
+						<Table>
+							<tr>
+								<td>
+									Which currently matches your present lifestyle?
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" id="active" name="lifestyle" value="active">
+									<label for="html">Active</label>
+									<input type="radio" id="moderate" name="lifestyle" value="moderate">
+									<label for="css">Moderate</label>
+									<input type="radio" id="seditary" name="lifestyle" value="seditary">
+									<label for="javascript">Seditary</label>
+								</td>
+
+							</tr>
+
+							<tr>
+								<td>
+									Are you planning to increase your activity level as you change your diet?
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" id="yes" name="dietchange" value="yes">
+									<label for="html">Yes</label>
+									<input type="radio" id="no" name="dietchange" value="no">
+									<label for="css">No</label>
+
+								</td>
+
+							</tr>
+
+							<tr>
+								<td>
+									What are your weight goals?
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" id="gainweight" name="weightgoals" value="active">
+									<label for="html">Gain Weight</label>
+									<input type="radio" id="loseweight" name="weightgoals" value="loseweight">
+									<label for="css">Lose Weight</label>
+									<input type="radio" id="maintainweight" name="weightgoals" value="maintainweight">
+									<label for="javascript">Maintain current weight</label>
+								</td>
+
+							</tr>
+
+						</Table>
+					</fieldset>
+			</tr>
+			</td>
+			<tr>
+				<td>
+					<fieldset>
+						<legend style="font-weight: bold">Food preference and restrictions</legend>
+						<Table>
+							<tr>
+								<td colspan="2">
+									Do you have any dietary restrictions? (select all that apply)
+								</td>
+
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian">
+									<label for="vehicle1">Vegetarian</label>
+									<input type="checkbox" id="glutenfree" name="glutenfree" value="glutenfree">
+									<label for="vehicle2">Gluten-Free</label>
+									<input type="checkbox" id="kosher" name="kosher" value="kosher">
+									<label for="vehicle3">Kosher</label>									<input type="checkbox" id="lowsalt" name="lowsalt" value="lowsalt">
+									<label for="vehicle3">Low Salt</label>
+								</td>
+							</tr>
+							<tr><td colspan="2">			<input type="checkbox" id="other" name="other" value="other">
+								<label for="other">Other, please explain</label></td></tr>
+							<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><textarea id="comments" name="comments" rows="4" cols="50"></textarea></td></tr>
+						</Table>
+					</fieldset>
+			</tr>
+			</td>
+			<tr>
+				<td>
+					<fieldset>
+						<legend style="font-weight: bold">Comments</legend>
+						<Table>
+							<tr>
+
+								<td colspan="2">
+									<p>Include any additional information that will help us develop a custom menu
+										designed to match your lifestyle and your goals.</p>
+								</td>
+							</tr>
+							<tr>
+
+								<td><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td>
+									<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+								</td>
+							</tr>
+						</Table>
+					</fieldset>
+			</tr>
+			</td>
+			<tr>
+				<td>
+					<fieldset>
+						<legend style="font-weight: bold">Process your information</legend>
+						<Table>
+							<tr>
+								<td>
+									<input type="submit" value="Submit Now">
+								</td>
+								<td><input type="reset" value="Start Over"></td>
+							</tr>
+						</Table>
+					</fieldset>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</main>
+
+</body>
+<footer>
+	<p> &copy; 2023 Shape Up!</p>
+</footer>
+
+</html>

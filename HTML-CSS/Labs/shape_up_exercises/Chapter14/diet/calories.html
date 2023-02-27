@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shape Up!</title>
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/calories.css">
+	<link rel="stylesheet" href="../styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
+		});
+	</script>
+</head>
+
+<body>
+
+	<header><a href="../index.html"><img src="../images/shape_up_logo.png" alt="Shape Up Logo" /></a>
+		<h2>Shape Up!</h2>
+		<h3>Find the best fit for you</h3>
+	</header>
+	<nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../strength/index.html">Strength Training</a></li>
+			<li><a href="../cardio/index.html">Cardio Exercises</a></li>
+			<li><a href="../stress/index.html">Stress Relief</a>
+				<ul>
+					<li><a href="../stress/index.html">What is Stress?</a></li>
+					<li><a href="../stress/tips.html">5 Helpful Tips</a></li>
+					<li>
+						<a href="../stress/meditate.html">Meditation</a>
+					</li>
+					<li>
+						<a href="../stress/vipassana.html">Vipassana</a>
+					</li>
+				</ul>
+			</li>
+			<li><a href="index.html">Healthy Diets</a></li>
+		</ul>
+	</nav>
+	<aside>
+		<h2 style="color: maroon;">Additional resources</h2>
+		<ul>
+			<li>
+				<a href="https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm">Physical activity
+					and
+					health</a>
+			</li>
+			<li>
+				<a
+					href="http://www.heart.org/HEARTORG/HealthyLiving/PhysicalActivity/FitnessBasics/Flexibility-Exercise-Stretching_UCM_464002_Article.jsp#.WpB8zIPwaUl">Stretching
+					exercises</a>
+			</li>
+			<li>
+				<a
+					href="http://www.heart.org/HEARTORG/HealthyLiving/PhysicalActivity/FitnessBasics/Strength-and-Resistance-Training-Exercise_UCM_462357_Article.jsp#.WpCPxIPwaUl">Strength
+					training</a>
+			</li>
+			<li>
+				<a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular
+					training</a>
+			</li>
+			<li>
+				<a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a>
+			</li>
+		</ul>
+	</aside>
+	<h1 style="text-align:center">Calorie Counter</h1>
+	
+
+		<table>
+			<th>Category</th>
+			<th>Food</th>
+			<th>Serving Size</th>
+			<th>Calories</th>
+			<tr>
+				<td rowspan="3" class="category">Beef</td>
+				<td>Frankfurter, Beef</td>
+				<td>1 each</td>
+				<td class="calories">184</td>
+			</tr>
+			<tr>
+
+				<td>Ground Beef</td>
+				<td>4 oz</td>
+				<td class="calories">264</td>
+			</tr>
+			<tr>
+
+				<td>T-Bone Steak</td>
+				<td>8 ounces</td>
+				<td class="calories">402</td>
+			</tr>
+
+			<tr>
+				<td rowspan="3" class="category">Bread</td>
+				<td>Bagel, plain</td>
+				<td>1 bagel</td>
+				<td class="calories">360</td>
+			</tr>
+			<tr>
+
+				<td>Bread, sliced</td>
+				<td>1 slice</td>
+				<td class="calories">60 to 80</td>
+			</tr>
+			<tr>
+
+				<td>English Muffin
+				</td>
+				<td>1</td>
+				<td class="calories">135</td>
+			</tr>
+
+			<tr>
+				<td rowspan="3" class="category">Cereal</td>
+				<td>Cheerios</td>
+				<td>1 cup</td>
+				<td class="calories">110</td>
+			</tr>
+			<tr>
+
+				<td>Corn Flakes</td>
+				<td>1 cup</td>
+				<td class="calories">100</td>
+			</tr>
+			<tr>
+
+				<td>Oatmeal, quick
+				</td>
+				<td>1 cup cooked</td>
+				<td class="calories">145</td>
+			</tr>
+
+			<tr>
+				<td rowspan="4" class="category">Cheese</td>
+				<td>American</td>
+				<td>1 ounce</td>
+				<td class="calories">106</td>
+			</tr>
+			<tr>
+
+				<td>Swiss</td>
+				<td>1 ounce</td>
+				<td class="calories">100</td>
+			</tr>
+			<tr>
+
+				<td>Cheddar
+				</td>
+				<td>1 ounce</td>
+				<td class="calories">114</td>
+			</tr>
+			<tr>
+
+				<td>Cottage Cheese
+				</td>
+				<td>regular	1/2 cup</td>
+				<td class="calories">117</td>
+			</tr>
+
+			<tr>
+				<td rowspan="2" class="category">Fruit</td>
+				<td>Apple</td>
+				<td>1 medium</td>
+				<td class="calories">80</td>
+			</tr>
+			<tr>
+
+				<td>Banana</td>
+				<td>1</td>
+				<td class="calories">105</td>
+			</tr>
+
+			<tr>
+				<td rowspan="3" class="category">Vegetables</td>
+				<td>Corn</td>
+				<td>fresh	1 medium ear</td>
+				<td class="calories">88</td>
+			</tr>
+			<tr>
+
+				<td>Carrot</td>
+				<td>raw	1 medium</td>
+				<td class="calories">25</td>
+			</tr>
+			<tr>
+
+				<td>Celery
+				</td>
+				<td>1 large stalk</td>
+				<td class="calories">9</td>
+			</tr>
+
+			<tr>
+				<td rowspan="5" class="category">Miscellaneous</td>
+				<td>Milk</td>
+				<td>whole	1 cup</td>
+				<td class="calories">157</td>
+			</tr>
+			<tr>
+
+				<td>Eggs</td>
+				<td>1</td>
+				<td class="calories">70</td>
+			</tr>
+			<tr>
+
+				<td>Peanut butter
+				</td>
+				<td>2 tablespoons</td>
+				<td class="calories">188</td>
+			</tr>
+			<tr>
+
+				<td>Pasta
+				</td>
+				<td>1/2 cup dry</td>
+				<td class="calories">200</td>
+			</tr>
+			<tr>
+
+				<td>Rice</td>
+				<td>1 cup cooked</td>
+				<td class="calories">204</td>
+			</tr>
+
+		</table>
+
+
+	
+	<p style="text-align: center;">
+		<br>Note: Contact us to get a detailed list if food calories<br>
+	</p>
+</body>
+<footer>
+	<p> &copy; 2023 Shape Up!</p>
+
+</footer>
+
+</html>
