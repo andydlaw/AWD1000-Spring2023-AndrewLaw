@@ -1,10 +1,9 @@
 {
   "name": "e-portfolio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"  
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +11,7 @@
   "homepage": "https://andydlaw/github.io/e-portfolio",
   "dependencies": {
     "gh-pages": "^5.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
