@@ -1,0 +1,21 @@
+.jumbotron2 {
+    background: url('../images/traumaroll.jpg') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+    
+}
+
+.jumbotron1 {
+    background: url('../images/20190523_161901.jpg') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+    
+}
+
+.jumbotron1 p{
+    text-shadow: 1px 1px  black;
+}
+
+.jumbotron2 p{
+    text-shadow: 1px 1px  black;
+}
