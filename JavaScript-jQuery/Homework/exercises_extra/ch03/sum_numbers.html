@@ -2,15 +2,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sum of Numbers</title>
 </head>
+
 <body>
     <main>
         <h1>Sum of Numbers</h1>
         <script>
+                        const num = []
+                        const minNum = 1
+                        const maxNum = 100
+            let sum = 0
+            
+            do {
+                entry = parseInt(prompt("Enter any top number to sum\nfrom 1 through 100"));
+
+                if (entry < minNum || entry > maxNum || isNaN(entry)) {                    
+                    alert("You entered " + entry + "\nEntry range must be 1 to 100.");
+                    
+                } else {
+
+                    
+                    num.push(entry)
+
+
+
+                    let msg = num[0]
+                    sum = num[0]
+
+                    for (var b = 1; b < (num.length); b++) {
+
+                        msg = msg + " + " + num[b]
+                        sum = sum + num[b]
+
+                    }
+
+
+                    alert("The sum of " + msg + " is " + sum);
+                    
+                }
+                more = prompt("Run program again (Y/N)", "Y")
+                    more = more.toLocaleUpperCase()
+                firstChar = more.charAt(0)
+            }
+            while (more == "Y")
+
+
+
+            document.write("The sum of numbers 1 through " + num.length + " is " + sum + " <br><br>");
+
+
+
+
 
         </script>
     </main>
 </body>
+
 </html>

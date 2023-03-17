@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    <main>
+        <h1>Convert from Fahrenheit to Celsius</h1>
+        <script>
+            let entry = 0
+            const fTemp = []
+            const cTemp = []
+            while (entry != 999) {
+                entry = parseInt(prompt('Enter Fehrenheit temperature from -100 through 212\nOr enter 999 to end entries'));
+                if ((entry < -100 && entry != 999) || (entry > 212 && entry != 999)) {
+                    alert("You entered " + entry + "\nEntry range must be -100 to +212.");
+                } else {
+                    fTemp.push(entry)
+
+                    let form = (entry - 32) * 5 / 9;
+                    cTemp.push(form)
+                }
+            }
+
+            for (var i = 0; i < (fTemp.length-1); i++) {
+
+
+
+                cTemp[i] = cTemp[i].toFixed(1);
+                fTemp[i] = fTemp[i].toFixed(1);
+
+                document.write(fTemp[i] + " F" + " = " + cTemp[i] + " C <br><br>");
+            }
+
+
+
+        </script>
+    </main>
+</body>
+
+</html>

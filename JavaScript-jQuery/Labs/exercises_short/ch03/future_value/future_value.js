@@ -27,9 +27,21 @@ let futureValue = investment;
 for (let i = 1; i <= years; i++ ) {
     futureValue += futureValue * rate / 100;
 }
+let mfutureValue= investment;
+for (let i = 1; i <= years; i++ ) {
+    mfutureValue += mfutureValue * ((rate/100) * 12);
+    
+}
 
 // display results
+document.write(`<h2>Future Value with Yearly Interest</h2>`);
 document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
 document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
 document.write(`<p><label>Years:</label> ${years}</p>`);
 document.write(`<p><label>Future Value:</label> ${futureValue.toFixed(2)}</p>`);
+
+document.write(`<h2>Future Value with Monthly Interest</h2>`);
+document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
+document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
+document.write(`<p><label>Years:</label> ${years}</p>`);
+document.write(`<p><label>Future Value:</label> ${mfutureValue.toFixed(2)}</p>`);

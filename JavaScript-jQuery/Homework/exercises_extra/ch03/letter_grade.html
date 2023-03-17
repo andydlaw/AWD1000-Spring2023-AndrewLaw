@@ -2,15 +2,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Grade Converter</title>
 </head>
+
 <body>
     <main>
         <h1>Show letter grade</h1>
         <script>
 
+            let entry = 0
+
+            const ngrade = []
+            const lgrade = []
+
+            while (entry != 999) {
+                entry = parseInt(prompt("Enter number grade from 0 through 100\nOr enter 999 to end entries"));
+                if (entry <= 100 && entry >= 0 && entry != 999) {
+                    ngrade.push(entry)
+                    if (entry <= 100 && entry >= 88) {
+                    lgrade.push("A")
+                } else {
+                    if (entry <= 87 && entry >= 80) {
+                        lgrade.push("B")
+                    }
+                    else {
+                        if (entry <= 79 && entry >= 68) {
+                            lgrade.push("C")
+                        }
+                        else {
+                            if (entry <= 67 && entry >= 60) {
+                                lgrade.push("D")
+                            }
+                            else { lgrade.push("F") }
+                        }
+                    }
+                }
+                }
+                else{}
+            }
+
+            for (var i = 0; i < (ngrade.length); i++) {
+                ngrade[i] = ngrade[i].toFixed(1);
+                document.write("Grade " + ngrade[i] + " = " + lgrade[i] + " <br><br>");
+            }
+
         </script>
     </main>
 </body>
+
 </html>
