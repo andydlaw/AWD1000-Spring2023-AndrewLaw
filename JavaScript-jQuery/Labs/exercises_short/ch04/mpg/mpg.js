@@ -20,10 +20,14 @@ const processEntries = () => {
     } else if (isNaN(gallons) || gallons <= 0) {
         alert(getErrorMsg("Gallons of gas used"));
         focusAndSelect("#gallons");
+        $("#gallons").value = 1;
     } else {
         $("#mpg").value = (miles / gallons).toFixed(2);
     }
 };
+
+
+
 
 var clearEntries = () => {
     $("#miles").value = "";
@@ -31,7 +35,23 @@ var clearEntries = () => {
     $("#mpg").value = "";
 };
 
+var clearMiles = () => {
+    $("#miles").value = "";
+
+};
+
+var clearGallons = () => {
+
+    $("#gallons").value = "";
+
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     $("#calculate").addEventListener("click", processEntries);
     $("#miles").focus();
+    $("#mpg").addEventListener("dblclick", clearEntries);  
+    $("#miles").addEventListener("focusin",clearMiles);
+    $("#gallons").addEventListener("focusin",clearGallons);
+    $("#gallons").addEventListener("focusout", processEntries);
+
 });

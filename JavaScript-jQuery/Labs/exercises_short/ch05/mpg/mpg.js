@@ -1,5 +1,8 @@
 "use strict";
 
+const mile = [];
+const gallon = [];
+
 const $ = selector => document.querySelector(selector);
 
 const getErrorMsg = lbl => `${lbl} must be a valid number greater than zero.`;
@@ -10,7 +13,6 @@ const focusAndSelect = selector => {
     elem.select();
 };
 
-const calculateMPG = (miles, gallons) => (miles / gallons).toFixed();
 
 const processEntries = () => {
     const miles = parseFloat($("#miles").value);
@@ -23,8 +25,16 @@ const processEntries = () => {
         alert(getErrorMsg("Gallons of gas used"));
         focusAndSelect("#gallons");
     } else {
-        $("#mpg").value = calculateMpg(miles / gallons);
+   mile[0] = miles;
+   gallon[0] = gallons;
+        $("#mpg").value = (mile/gallon).toFixed(1);
+
     }
+};
+
+const calculateMPG = () => {
+
+    return parseFloat(mile);
 };
 
 document.addEventListener("DOMContentLoaded", () => {

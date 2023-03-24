@@ -22,14 +22,15 @@ const addScore = function(selector) {
 const calculateAverage = () => {
     let total = 0;
     for (let val of scores) {
-        total = total + val;
+        total += val;
     }
     return parseInt(total / scores.length);
 };
 
-const processDOM = function() {
-    $("#add").addEventListener("click", addScore);
-    $("#score").focus();
-}
 
-document.addEventListener("DOMContentLoaded", processDOM);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+$("#add").addEventListener("click", addScore);
+
+});
