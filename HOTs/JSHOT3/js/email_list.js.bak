@@ -1,0 +1,107 @@
+"use strict"
+
+const $ = selector => document.querySelector(selector);
+
+const joinList = () => {
+    // get user entries from text boxes
+    const email = $("#email").value;
+    const zip = $("#zip").value;
+    const firstName = $("#first_name").value;
+    const lastName = $("#last_name").value;
+
+    const address = $("#address").value;
+    const city = $("#city").value;
+    const state = $("#state").value;
+    const cell = $("#cell").value;
+     
+    // check user entries
+    let isValid = true;
+
+
+
+
+    if (firstName == "") {
+        $("#first_name_error").textContent = "First name is required.";
+        isValid = false;
+    } else { 
+        $("#first_name_error").textContent = ""; 
+    }
+
+    if (lastName == "") {
+        $("#last_name_error").textContent = "Last name is required.";
+        isValid = false;
+    } else { 
+        $("#last_name_error").textContent = ""; 
+    }
+
+    if (address == "") {
+        $("#address_error").textContent = "Address is required.";
+        isValid = false;
+    } else { 
+        $("#address_error").textContent = ""; 
+    }
+
+    if (city == "") {
+        $("#city_error").textContent = "City is required.";
+        isValid = false;
+    } else { 
+        $("#city_error").textContent = ""; 
+    }
+
+    if (state == "") {
+        $("#state_error").textContent = "State is required.";
+        isValid = false;
+    } else { 
+        $("#state_error").textContent = ""; 
+    }
+
+    if (zip == "") {
+        $("#zip_error").textContent = "Zip Code is required.";
+        isValid = false;
+    } else { 
+        $("#zip_error").textContent = ""; 
+    }
+
+    if (email == "") { 
+        $("#email_error").textContent = "Email is required.";
+        isValid = false;
+    } else { 
+        $("#email_error").textContent = ""; 
+    }
+
+    if (cell == "") { 
+        $("#cell_error").textContent = "Cell Phone Number is required.";
+        isValid = false;
+    } else { 
+        $("#cell_error").textContent = ""; 
+    }
+
+    // submit the form if user entries are valid
+    if ( isValid ) {
+        $("#email_form").submit(); 
+    }
+};
+
+const clearForm = () => {
+    // clear text boxes
+    $("#email").value = "";
+  
+    $("#first_name").value = "";
+
+    // clear span elements
+    $("#email_error").textContent = "*";
+   
+    $("#first_name_error").textContent = "*"; 
+
+    // set focus on first text box after resetting the form
+    $("#email").focus();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    // hook up click events for both buttons
+    $("#join_list").addEventListener("click", joinList);
+    $("#clear_form").addEventListener("click", clearForm);
+
+    // set focus on first text box after the form loads
+    $("#email").focus();
+});

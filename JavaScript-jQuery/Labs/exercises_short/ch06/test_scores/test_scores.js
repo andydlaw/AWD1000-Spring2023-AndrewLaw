@@ -2,6 +2,8 @@
 
 const names = ["Ben", "Joel", "Judy", "Anne"];
 const scores = [88, 98, 77, 88];
+const minscore = 0;
+const maxscore = 100;
 
 const $ = selector => document.querySelector(selector);
 
@@ -12,15 +14,15 @@ const addScore = () => {
 	let isValid = true;
     
     // check entries for validity
-    if (name == "") {
+    if (name === "") {
 		$("#name").nextElementSibling.textContent = "This field is required.";
 		isValid = false;
 	} else {
 		$("#name").nextElementSibling.textContent = "";
 	}
 	
-	if (isNaN(score) || score < 0 || score > 100) {
-		$("#score").nextElementSibling.textContent = "You must enter a valid score.";
+	if (isNaN(score) || score < minscore || score > maxscore) {
+		$("#score").nextElementSibling.textContent = "You must enter a score from 0 to 100.";
 		isValid = false;
 	} else {
 		$("#score").nextElementSibling.textContent = "";
@@ -31,11 +33,22 @@ const addScore = () => {
 		scores[scores.length] = score;
 	    $("#name").value = "";
 		$("#score").value = "";
+		$("#score_display").value="";
 	}
     $("#name").focus();
 };
 
+const displayScores = () =>{
+	let scoreDisplay = "";
+	for (let i = 0; i< scores.length; ++i){
+		scoreDisplay += names[i] + " = " + scores[i]+ "\n";
+	}
+
+	$("#scores_display").value = scoreDisplay;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	$("#add").addEventListener("click", addScore);
+	$("#display_scores").addEventListener("click", displayScores)
 	$("#name").focus();
 });

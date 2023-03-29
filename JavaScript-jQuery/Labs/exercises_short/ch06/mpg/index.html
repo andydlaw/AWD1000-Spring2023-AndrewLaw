@@ -11,15 +11,17 @@
         <h1>The Miles Per Gallon Calculator</h1>
         <div>
             <label for="miles">Miles Driven:</label>
-            <input type="text" id="miles">
+            <input type="number" id="miles" min="1">
+            <span>*</span>
         </div>
         <div>
             <label for="gallons">Gallons of Gas Used:</label>
-            <input type="text" id="gallons">
+            <input type="number" id="gallons" min="1">
+            <span>*</span>
         </div>
         <div>
             <label for="mpg">Miles Per Gallon:</label>
-            <input type="text" id="mpg" disabled>
+            <input type="number" id="mpg" disabled>
         </div>
         <div>
             <label>&nbsp;</label>
