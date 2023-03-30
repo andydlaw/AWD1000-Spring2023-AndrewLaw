@@ -40,11 +40,16 @@ const addScore = () => {
 
 const displayScores = () =>{
 	let scoreDisplay = "";
+	let totalPoints = 0;
+	let testAvg = 0.0;
 	for (let i = 0; i< scores.length; ++i){
 		scoreDisplay += names[i] + " = " + scores[i]+ "\n";
+		totalPoints += scores[i];
 	}
 
 	$("#scores_display").value = scoreDisplay;
+	testAvg = totalPoints/scores.length;
+	$("#avg").value = testAvg.toFixed(2);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

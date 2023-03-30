@@ -17,6 +17,11 @@ label {
     width: 11em;
     text-align: right;
 }
+#message{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
 input {
     margin-left: 1em;
     margin-right: 0.5em;
