@@ -1,6 +1,6 @@
 "use strict";
 $(document).ready( () => {
-    $("#faqs h2").click( evt => {
+   /* $("#faqs h2").click( evt => {
         const h2 = evt.currentTarget;
         $(h2).toggleClass("minus");
         if ($(h2).attr("class") !== "minus") {
@@ -11,5 +11,10 @@ $(document).ready( () => {
         }
         evt.preventDefault();
     });
-    $("#faqs").find("a:first").focus();
+    $("#faqs").find("a:first").focus(); */
+
+    $("#faqs").accordion({
+        collapsible:true,
+        heightStyle:"content"
+    });
 });

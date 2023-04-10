@@ -2,7 +2,21 @@
 
 $(document).ready( () => {
 	const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
-	
+	// Code to implement Tabs widget
+	$("#tabs").tabs();
+
+	// Code for a datepicker widget
+	$("#arrival_date").datepicker({
+		minDate: new Date(), maxDate: +90
+	});
+
+	// Click event for policies
+	$("#policies").click(() => {
+		$("#dialog").dialog({
+			modal: true
+		});
+	})
+
 	// move the focus to the first text box
 	$("#arrival_date").focus();
 	

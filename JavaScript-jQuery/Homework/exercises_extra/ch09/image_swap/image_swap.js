@@ -9,13 +9,17 @@ $(document).ready( () => {
 	
 	// set up event handlers for links    
 	$("#image_list a").click( evt => {
-		const link = evt.currentTarget;
-		
+		const link = evt.currentTarget;		
 		const imageURL = $(link).attr("href");
-		$("#image").attr("src", imageURL);
-				
 		const caption = $(link).attr("title");
-		$("#caption").text(caption);
+	
+
+		$("#caption").fadeOut(1000);
+		$("#image").fadeOut(1000,
+			() =>{
+				$("#caption").text(caption).fadeIn(1000);
+				$("#image").attr("src", imageURL).fadeIn(1000);
+			});
 
 		// cancel the default action of the link
 	    evt.preventDefault();
