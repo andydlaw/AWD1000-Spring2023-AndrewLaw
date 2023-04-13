@@ -1,0 +1,310 @@
+/* the styles for the elements */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    width: 95%;                             /* fixed width was 900 */
+    max-width: 1024px;                      /* add max-width */
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid #444549;            /* 4 / 16 */
+    box-shadow: 0 .625em 1.25em .625em;     /* 10 / 16; 20 / 16 */
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+h3{
+	color: #f4d846
+}
+div {
+    margin-bottom: 1em;
+}
+label {
+    display: inline-block;
+    width: 11em;
+    text-align: right;
+}
+.thanksIMG{
+    text-align:center ;
+}
+input ,textarea{
+    margin-left: 1em;
+    margin-right: 0.5em;
+}
+textarea {
+	width: 20em;
+	height: 8em;
+	font-size: 120%;
+    color: red;
+    border:solid 3px red ;
+}
+span {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover, a:focus { 
+    color: #e76855;
+}
+
+.game{
+
+ 
+	display: flex;
+    flex-direction: column;  
+    
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title of the game */
+.title{
+   
+    
+    font-size: 4rem;
+    
+}
+  
+
+  
+/* Score Board */
+.score{
+	display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+    
+   
+    
+    
+   
+}
+  
+/* Score  */
+.p-count,.c-count, .t-count{
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+  
+/* displaying three buttons in one line */
+.options{
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+  
+/* Styling on all three buttons */
+.rock, .paper, .scissor{
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: #f0a94d;
+    outline: none;
+    border-color: #f0a94d;
+    border: none;
+    cursor: pointer;
+}
+  
+.move{
+    font-size: 2rem;
+    font-weight: bold;
+}
+  
+/* Reload button style */
+.reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f0a94d;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+  
+.result{
+    
+    font-size: 1.2rem;
+}
+  
+
+
+/* the styles for the header */
+header {
+    
+    background-color: #444549;    
+    padding: 15px 3.3333%;              /* 30 / 900 * 100 */
+    border-bottom: 2px solid #444549;                                                     
+} 
+header img { 
+	float: left; 
+    width: 15.5555%;                        /* 140 / 990 * 100 */
+    max-width: 140px;                       /* native size */
+    min-width: 70px;
+} 
+header h2 {
+	font-size: 250%;
+	font-style: italic;
+	color: #f0d64e;
+	text-indent: 5%;                        /* 45 / 900 *100 */
+	text-shadow: 3px 3px 3px #444549;
+    margin-bottom: .3em;
+}
+header h3 {
+	font-size: 150%;
+    text-indent: 5%;
+    padding-bottom: .75em;       
+}
+
+/* the styles for the navigation menu */
+#nav_menu {
+	clear: left;
+    border-bottom: 2px solid #a2acab;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+    width: 25%;                             /* 5 items each 20% of menu */
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	padding: .7em 0;
+	background-color: #a2acab;
+	color: white;
+}
+#nav_menu ul li a.current {
+	color: black;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: #887330;
+}
+#nav_menu ul li:hover ul {
+	width: 100%;
+}
+
+/* the styles for the section */
+section {
+    width: 90%;                        /* 565 / 900 X 100 */
+    
+    padding: 1.5625em 3.3333%;              /* 20 / 16; 30 / 900 x 100 */
+}
+section h1 {
+    font-size: 160%;
+    margin-bottom: .3em;
+}
+section h2 {
+    color: #e76855;
+    font-size: 130%;
+    margin-bottom: .5em;
+}
+section h3 {
+    color: #e76855;
+    font-size: 110%;
+    margin-bottom: .4em;
+}
+section p {
+    font-size: 100%;
+    margin-bottom: .7em;
+}
+
+
+
+/* the styles for the footer */
+footer { 
+	clear: both;
+	padding: .9375em 3.3333%;               /* 15 / 16; 30 / 900 * 100 */
+    background-color: #444549;
+} 
+footer p {
+	text-align: center;
+    font-size: 85%;
+    color: white;
+}
+#mobile_menu {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+	body {
+		font-size: 90%;
+		box-shadow: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#nav_menu {
+		display: none;
+	}
+    
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: #a2acab !important;
+	    padding: 3px !important;
+    }
+
+    #mobile_menu {
+		display: block;
+	}
+    #mobile_menu ul {
+        background-color: #a2acab;
+    }
+    #mobile_menu a {
+        background-color: #a2acab;
+    }
+    #mobile_menu a:hover, #mobile_menu a:focus {
+        color:#e3674f;
+    }
+	header h2 {
+		font-size: 200%;
+	}
+	section {
+		float: none;
+        width: 93.3334%;
+	}
+	aside {
+		float: none;        
+		width: 93.3334%;
+        padding-top: 0;
+        padding-bottom: 1.5625em;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	header h2 {
+		font-size: 180%;
+	}
+	header h3 {
+		font-size: 115%;
+	}
+    section p {
+	    font-size: 95%;
+    }
+}
